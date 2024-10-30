@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.container1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    padding-bottom:10px;
+}
+
+
+.container1:hover .top:before,
+.container1:hover .top:after,
+.container1:hover .bottom:before,
+.container1:hover .bottom:after,
+.container1:active .top:before,
+.container1:active .top:after,
+.container1:active .bottom:before,
+.container1:active .bottom:after {
+    margin-left: 200px;
+    transform-origin: -200px 50%;
+    transition-delay: 0s;
+}
+
+.container1:hover .center,
+.container1:active .center {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.top:before,
+.logo:before,
+.top:after,
+.bottom:before,
+.bottom:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200vmax;
+    height: 200vmax;
+    top: 50%;
+    left: 50%;
+    margin-top: -100vmax;
+    transform-origin: 0 50%;
+    transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+    z-index: 10;
+    opacity: 0.65;
+    transition-delay: 0.2s;
+}
+
+
+
+.overlay-logo {
+    position: absolute;
+    width: 100px; 
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 20;
+}
+
+.container1:hover .overlay-logo {
+    opacity: 0;
+    transform: scale(0.5) translate(-100%, -100%);
+}
+
+.center {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.5s; 
+}
+
+.container1:hover .center {
+    opacity: 1;
+}
+
+.top:before {
+    transform: rotate(45deg);
+    background: #2EC0F9;
+}
+
+.top:after {
+    transform: rotate(135deg);
+    background: #67AAF9;
+}
+
+.bottom:before {
+    transform: rotate(-45deg);
+    background: #9BBDF9;
+}
+
+.bottom:after {
+    transform: rotate(-135deg);
+    background: #C4E0F9;
+}
+
+.center {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+    transition-delay: 0s;
+    color: #333;
+}
+
+.center input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+
+
+
+
+
+.action-row {
+    display: flex;
+    padding-top:5px;
+    gap: 10px; 
+    align-items: center; 
+}
+
+
+.language-picker{
+    width: 100%;
+}
+
+.login-btn{
+    width: 60%;
+    padding: 15px;
+    background: #2EC0F9;
+    color: white;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    font-family: inherit;
+    position: relative;
+    top:-7px;
+}
+
+
+.language-picker option {
+    padding-left: 25px; /* Space for flag */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 15px;
+}
+
+.language-picker option[value="en"] {
+    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/flags/4x3/gb.svg");
+}
+
+.language-picker option[value="jp"] {
+    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/flags/4x3/jp.svg");
+}
+
+.language-picker option[value="vn"] {
+    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/flags/4x3/vn.svg");
+}
