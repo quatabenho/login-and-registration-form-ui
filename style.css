@@ -178,14 +178,6 @@ body {
     background-size: 20px 15px;
 }
 
-.language-picker option[value="en"] {
-    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/flags/4x3/gb.svg");
-}
-
-.language-picker option[value="jp"] {
-    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/flags/4x3/jp.svg");
-}
-
-.language-picker option[value="vn"] {
-    background-image: url("https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/flags/4x3/vn.svg");
+#loginEmail, #loginPassword {
+    border-radius: 7px;
 }
